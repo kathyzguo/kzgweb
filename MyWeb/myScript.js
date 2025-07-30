@@ -269,24 +269,17 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const oddmonths = [1, 3, 5, 8, 10];
 const intervals = [30, 12, 31, 24, 60];
 
-eventsMap.set("202507220000", "Nil's 18th Birthday");
-eventsMap.set("202507240000", "Mlumbeni's 18th Birthday");
 eventsMap.set("202507292300", "Genshin Impact Version 5.8 Launch");
 eventsMap.set("202508010000", "Community at Cornell Reading Reflection Due");
 eventsMap.set("202508011200", "Launch Cornell Consulting");
-eventsMap.set("202508020000", "Gwyneth's 18th Birthday");
-eventsMap.set("202508030000", "Chloe W's 18th Birthday");
 eventsMap.set("202508041430", "Community at Cornell Zoom Call");
-eventsMap.set("202508141400", "Nicole-Chloe's Birthday Party");
 eventsMap.set("202508180000", "Cornell Pre-Orientation Deadline");
-eventsMap.set("202508260000", "Nicole's 18th Birthday");
 eventsMap.set("202508122300", "Honkai: Star Rail Version 3.5 Launch");
 eventsMap.set("202508192300", "Genshin Impact 5.8 Phase 2 Launch");
 eventsMap.set("202509022300", "Honkai: Star Rail 3.5 Phase 2 Launch");
 eventsMap.set("202509092300", "Genshin Impact Version 6.0 Launch");
 eventsMap.set("202509232300", "Honkai: Star Rail Version 3.6 Launch");
 eventsMap.set("202509302300", "Genshin Impact 6.0 Phase 2 Launch");
-eventsMap.set("202510060000", "My 19th Birthday!");
 eventsMap.set("202510142300", "Honkai: Star Rail 3.6 Phase 2 Launch");
 eventsMap.set("202510212300", "Genshin Impact Version 6.1 Launch");
 eventsMap.set("202511042200", "Honkai: Star Rail Version 3.7 Launch");
@@ -295,7 +288,6 @@ eventsMap.set("202511252200", "Honkai: Star Rail 3.7 Phase 2 Launch");
 eventsMap.set("202512022200", "Genshin Impact Version 6.2 Launch");
 eventsMap.set("202512162200", "Honkai: Star Rail Version 3.8 Launch");
 eventsMap.set("202512232200", "Genshin Impact 6.2 Phase 2 Launch");
-eventsMap.set("202512070000", "John's 19th Birthday");
 
 function determineDays(month) {
     if (oddmonths.indexOf(month) >= 0) {
