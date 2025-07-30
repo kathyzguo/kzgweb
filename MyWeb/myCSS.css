@@ -1,0 +1,823 @@
+@import"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap";
+
+:root {
+    --grid-columns: 5;
+    --GIS: "1515/1519";
+    --HSRS: "976/1356";
+    --GI: 1515/1519;
+    --HSR: 976/1356;
+}
+
+body {
+  font-family: "Montserrat";
+  margin-left: 185px;
+  transition: 0.5s;
+}
+
+h2 {
+    font-size: 35px;
+    text-decoration: none; 
+}
+
+h3 {
+    font-size: 30px;
+    text-decoration: none; 
+}
+
+h4 {
+    font-size: 25px;
+}
+
+
+p {
+    font-size: 20px;
+}
+
+.pu {
+    color: #5305f0;
+}
+
+#back_right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 50px;
+    border: solid 5px;
+    border-image: linear-gradient(#ffa2ff, #ca90ff) 1;
+    cursor: pointer;
+}
+
+.leftnav {
+    margin-left: -185px;
+    background-color: #111111;
+    overflow: hidden;
+    height: 100%;
+    width: 175px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.leftnav * {
+    width: 175px;
+    transition: 0.3s;
+}
+
+.leftnav > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.leftnav > a {
+    float: left;
+    color: #ffffff;
+    padding: 13px 10px;
+    font-size: 16px;
+    text-shadow: 2px 2px 5px #ff88ff;
+    text-decoration: none;
+}
+
+.leftnav > a.active {
+    background-color: #e287e2;
+    text-shadow: 2px 2px 5px #111111;
+}
+
+.leftnav > a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-shadow: 2px 2px 5px #eb4deb;
+}
+
+.leftnav > a.active:hover {
+    background-color: rgb(242, 151, 242);
+    text-shadow: 2px 2px 5px #111111;
+}
+
+#googleinput {
+    width: 90%;
+    height: 40px;
+    background-image: url("Misc/SearchIcon.png");
+    background-size: 38px;
+    background-position: 10px 6px;
+    background-repeat: no-repeat;
+    padding: 5px 0px 5px 58px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin-left: 12px;
+}
+
+.googlecontainer {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+}
+
+.googlecontainer > a {
+    text-decoration: none;
+}
+
+.googlecontainer > a > img {
+    width: 90%;
+    padding: 6px 15px;
+    margin-bottom: 0px;
+}
+
+.googlecontainer > a > h3 {
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.weathercontainer {
+    position: relative; 
+    float: left;
+}
+
+#citiesbutton {
+    cursor: pointer;
+    height: 50px;
+    width: 350px;
+    background-image: url("Arrows/ArrowIcon_Down.png"), linear-gradient(#ffb1ff, #f680f6);
+    background-size: 35px, cover;
+    background-position: 309px 6px, 0 0;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    text-align: left;
+    border-color: #4b0ae1;
+    color: #ffffff;
+}
+
+.weathernav {
+    box-sizing: border-box;
+    width: 350px;
+    height: 350px;
+    overflow: scroll;
+    font-size: 23px;
+    z-index: 1;
+    position: absolute;
+    display: none;
+    background-color: #f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.show {
+    display: block;
+}
+
+#weatherinput, #weatherinput:focus {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    background-image: url("Misc/SearchIcon.png");
+    background-position: 7.5px 7.5px;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    border-style: none;
+    border-bottom: 1px solid;
+    padding: 2.5px 0px 2.5px 50px;
+    font-size: 20px;
+    outline: none;
+}
+
+.weathernav > p {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px; 
+    padding: 10px;
+    cursor: pointer;
+}
+
+.weathernav > p:hover {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #dddddd;
+}
+
+.weatheractive {
+    color: #ff00ff;
+}
+
+.corf {
+    height: 50px;
+    width: 250px;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.corfweather {
+    box-sizing: border-box;
+    float: left;
+    position: absolute;
+    left: 75px;
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    background-image: linear-gradient(#ffb1ff, #f680f6);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.corfweather::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-image: linear-gradient(#a281f0, #885af4);
+    transition: 0.5s;
+    opacity: 0%;
+}
+
+.corfweather input {
+    height: 0;
+    width: 0;
+}
+
+.corfweather > span {
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    top: 6px;
+    left: 6px;
+    font-size: 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+input:checked + span {
+    transform: translateX(50px);
+}
+
+.corfweather:has(input:checked)::after {
+    opacity: 100%;
+}
+
+.corflabels {
+    font-family: Verdana, sans-serif;
+    font-size: 40px;
+    position: absolute;
+    margin-top: 0;
+    top: 0;
+    right: 183px;
+}
+
+#upcomingEvents > li {
+    font-size: 20px;
+}
+
+#upcomingEvents >li::marker {
+    content: "✧";
+    font-size: 40px;
+    color: #ff00ff;
+}
+
+.calendar {
+    box-sizing: border-box;
+    position: relative;
+    width: 90%;
+    aspect-ratio: 1.217;
+    clear: both;
+    border-image: linear-gradient(#ffa2ff, #ff00ff) 1;
+    border-width: 7px;
+    border-style: ridge;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 6fr 3fr repeat(5, 12fr);
+}
+
+.calendar > h2 {
+    box-sizing: border-box;
+    border-bottom: solid 4px #ffa8ff;
+    grid-column: 1 / span 7;
+    background-color: #ffbeff;
+    margin: 0;
+    padding: 0;
+    font-size: 3vw;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+
+#calLeftArrow {
+    position: absolute;
+    top: 0;
+    left: 1.5vw;
+    height: 5vw;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+#calRightArrow {
+    position: absolute;
+    top: 0;
+    right: 1.5vw;
+    height: 5vw;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.calendar > h3 {
+    box-sizing: border-box;
+    background-color: #fc9dfc;
+    border-bottom: solid 4px #ff94ff;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2vw;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar > div {
+    border-top: dashed #ffd5fb 3px;
+    border-left: dashed #ffd5fb 3px;
+    overflow: auto;
+    content: "";
+}
+
+.calendar > div > h4 {
+    font-size: 1.2vw;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.6vw;
+    color:#a281f0;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.calendar > div > p {
+    font-size: 0.85vw;
+    margin: 0.8vw;
+    padding: 0.4vw;
+    color: #ffffff;
+    border-radius: 0.1vw;
+    background-color: #a281f0;
+    box-shadow: 0.3vw 0.3vw 0 #885af4, -0.3vw -0.3vw 0 #c7b0fe;;
+    display: flex;
+}
+
+.calendar ::-webkit-scrollbar {
+    width: 0.3vw;
+    height: 0.3vw;
+}
+
+.calendar ::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+.calendar ::-webkit-scrollbar-thumb {
+  background: #ffc9fa;
+  box-shadow: inset 0 0 0.3vw #ffc8f9; 
+  border-radius: 1vw;
+}
+
+.calendar ::-webkit-scrollbar-thumb:hover {
+  background: #ffb3f7; 
+}
+
+#GIprogressbar {
+    box-sizing: border-box;
+    width: 90%;
+    height: 50px;
+    border: solid 5px #ff00ff;
+    border-radius: 30px;
+    margin: auto;
+    background-color: #ffc8f9;
+    position: relative;
+    overflow: hidden;
+}
+
+#GIprogressbar::after {
+    content: var(--GIS);
+    padding: 6px 0px 8px 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right,#00000000, #00000000 calc(var(--GI) * 100%), 
+    #ffffff calc(var(--GI) * 100%), #ffffff 100%);
+    z-index: 2;
+}
+
+#GIprogressbar::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    margin-left: -50%;
+    top: 0;
+    left: 0;
+    background-image: repeating-linear-gradient(-45deg, #00000000, #00000000 20px, #ffa7f5 20px, #ffa7f5 40px);
+    z-index: 1;
+    animation: progressBarSlide linear 2s infinite;
+}
+
+#HSRprogressbar {
+    box-sizing: border-box;
+    width: 90%;
+    height: 50px;
+    border: solid 5px #ff00ff;
+    border-radius: 30px;
+    margin: auto;
+    background-color: #ffc8f9;
+    position: relative;
+    overflow: hidden;
+}
+
+#HSRprogressbar::after {
+    content: var(--HSRS);
+    padding: 6px 0px 8px 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right,#00000000, #00000000 calc(var(--HSR) * 100%), 
+    #ffffff calc(var(--HSR) * 100%), #ffffff 100%);
+    z-index: 2;
+}
+
+#HSRprogressbar::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    margin-left: -50%;
+    top: 0;
+    left: 0;
+    background-image: repeating-linear-gradient(-45deg, #00000000, #00000000 20px, #ffa7f5 20px, #ffa7f5 40px);
+    z-index: 1;
+    animation: progressBarSlide linear 2s infinite;
+}
+
+#akasha {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.iframeSee {
+    box-sizing: border-box;
+    border-style: ridge;
+    border-width: 5px;
+    border-image: linear-gradient(#ffa2ff, #ca90ff) 1;
+    padding: 20px;
+    width: 98%;
+    margin: auto;
+    aspect-ratio: 2.3;
+}
+
+.s5 {
+    color: #ff91f6;
+}
+
+.s4 {
+    color: #5500ff;
+}
+
+.bannerDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap : 10px;
+    row-gap: 5px;
+}
+.wishType {
+    border-style: solid;
+    width: fit-content;
+    padding: 10px;
+    margin: 5px 0px;
+    border-radius: 50px;
+    border-width: 3px;
+}
+
+.bannerBorder {
+    border-style: solid; 
+    border-image: linear-gradient(#ffa2ff, #d08aff) 1;
+    border-width: 4px; 
+    padding: 17px;
+}
+
+.GIWishType, .HSRWishType {
+    box-sizing: border-box;
+    border-color: #ffa2ff;
+    border-style: solid;
+    font-size: 20px;
+    border-width: 4px;
+    padding: 10px;
+    background-color: #ffb4ff;
+    color: #ffffff;
+    text-shadow: #e0e0e0 1px 1px 2px;
+    margin-right: -10px;
+    margin-bottom: -4px;
+    border-radius: 25px 25px 0px 0px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+.GIWishType:active, .HSRWishType:active {
+    background-color: #efefef;
+}
+
+.GIWishType:hover, .HSRWishType:hover {
+    border-color: #ff7dff;
+    background-color: #ff8aff;
+}
+
+.activeBanner {
+    border-color: #ff54ff;
+    background-color: #ff6dff;
+}
+
+#GIEndgame, #HSREndgame, .mSkills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3vw;
+    margin: 2vw;
+}
+
+.GIStats, .HSRStats {
+    box-sizing: border-box;
+    border-style: solid;
+    box-shadow:  1vw 1vw#06004d;
+    width: 18.3vw;
+    aspect-ratio: 1;
+    background-color: #030021;
+    position: relative;
+    transition: 0.3s;
+}
+
+.GIStats:hover, .HSRStats:hover {
+    box-sizing: border-box;
+    border-style: solid;
+    box-shadow:  1.5vw 1.5vw#04002d;
+    margin: -0.5vw 0 0 -0.5vw;
+    width: 18.3vw;
+    aspect-ratio: 1;
+    background-color: #02001b;
+    position: relative;
+}
+
+
+.GIStats > img, .HSRStats > img {
+    position: absolute;
+    width: 8.5vw;
+    aspect-ratio: 1;
+    top: 0.5vw;
+    left: 0.5vw;
+}
+
+.GIStats > h2, .HSRStats > h2 {
+    position: absolute;
+    font-size: 3.7vw;
+    top: 0.5vw;
+    right: 0.5vw;
+    color: #ffffff;
+    margin: 0;
+    padding: 1vw 0;
+}
+
+.GIStats > h3, .HSRStats > h3 {
+    position: absolute;
+    font-size: 1.5vw;
+    top: 8.5vw;
+    left: 0.5vw;
+    color: #ffffff;
+    margin: 0;
+    padding: 1vw 0;
+}
+
+.GIStats > p, .HSRStats > p {
+    position: absolute;
+    font-size: 1vw;
+    top: 11vw;
+    left: 0.5vw;
+    color: #ffffff;
+    margin: 0;
+    padding: 1vw 0;
+}
+
+#showmore {
+    position: absolute;
+    top: 15vw;
+    left: 33%;
+    width: 6vw;
+    font-size: 1vw;
+    padding: 0.2vw;
+    aspect-ratio: 3;
+    color: #ffffff;
+    background-color: #020014;
+    border-color: #ffffff;
+    cursor: pointer;
+}
+
+#popupImagine_T {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000090;
+    z-index: 3;
+}
+
+#popupImagine_Tdiv {
+    border: #ffffff 5px solid;
+    background-color: #05003b;
+    width: 50%;
+    position: relative;
+}
+
+.xpopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.rankAct {
+    display: flex;
+    flex-wrap: nowarp;
+    margin: 10px;
+    align-items: center;
+}
+
+.rankAct > img {
+    width: 50px;
+    aspect-ratio: 1;
+}
+
+.rankAct > h3 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#m3 {
+    width: 300px;
+    float: left;
+    padding: 10px;
+    margin: 0 20px 0 0;
+    border: ridge 5px;
+    border-image: linear-gradient(#ffa2ff, #ff00ff) 1;
+}
+
+.mySkills {
+    box-sizing: border-box;
+    box-shadow:  1vw 1vw #ff72ff;
+    width: 13vw;
+    aspect-ratio: 1;
+    background-color: #ffaaff;
+    position: relative;
+    transition: 0.3s;
+}
+
+.mySkills:hover {
+    box-sizing: border-box;
+    box-shadow:  1.5vw 1.5vw#ff52ff;
+    margin: -0.5vw 0 0 -0.5vw;
+    width: 13vw;
+    aspect-ratio: 1;
+    background-color: #ff92ff;
+    position: relative;
+}
+
+.mySkills > img {
+    width: 6vw;
+    display: block;
+    margin: 1vw auto;
+}
+
+.mySkills > h3 {
+    color: #ffffff;
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Proj {
+    width: 95%;
+    display: flex;
+    height: fit-content;
+    background-color: #AF8DFF;
+    border-radius: 10px;
+    box-shadow: -10px -10px #8049ff;
+    margin: 50px auto;
+}
+
+.Proj > img {
+    box-sizing: border-box;
+    border: #ffffff 4px solid;
+    margin: 25px;
+    width: 300px;
+}
+
+.Proj > div > h3 {
+    font-size: 25px;
+    color: #ffffff;
+    flex: 0 3 auto;
+    padding: 0 10px;
+}
+
+.Proj > div > p {
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+#contactInfo {
+    display: flex;
+    column-gap: 50px;
+}
+
+#contactInfo > div > a > img {
+    width: 75px;
+    cursor: pointer;
+}
+
+.no { 
+    margin: 0;
+    padding : 0;
+}
+
+@keyframes progressBarSlide{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(56.67px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --grid-columns: 4;
+    }
+    .onlyLarge {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --grid-columns: 3;
+    }
+    .corf {
+        margin-top: 20px;
+    }
+    .Proj {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --grid-columns: 2;
+    }
+    .leftnav {
+        display: none;
+    }
+    body {
+        margin-left: 20px;
+    }
+    .onlyLarge {
+        display: block;
+    }
+}
