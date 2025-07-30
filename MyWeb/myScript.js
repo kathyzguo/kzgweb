@@ -275,18 +275,32 @@ eventsMap.set("202508020730", "Honkai: Star Rail Version 3.5 Livestream");
 eventsMap.set("202508122300", "Honkai: Star Rail Version 3.5 Launch");
 eventsMap.set("202508181200", "Finish Backend First Project");
 eventsMap.set("202508192300", "Genshin Impact 5.8 Phase 2 Launch");
+eventsMap.set("202508298000", "Genshin Impact Version 6.0 Livestream");
+eventsMap.set("202509010000", "Labor Day");
 eventsMap.set("202509022300", "Honkai: Star Rail 3.5 Phase 2 Launch");
 eventsMap.set("202509092300", "Genshin Impact Version 6.0 Launch");
+eventsMap.set("202509120730", "Honkai: Star Rail Version 3.6 Livestream");
 eventsMap.set("202509232300", "Honkai: Star Rail Version 3.6 Launch");
 eventsMap.set("202509302300", "Genshin Impact 6.0 Phase 2 Launch");
+eventsMap.set("202510108000", "Genshin Impact Version 6.1 Livestream");
+eventsMap.set("202510130000", "Indigenous Peoples Day");
 eventsMap.set("202510142300", "Honkai: Star Rail 3.6 Phase 2 Launch");
 eventsMap.set("202510212300", "Genshin Impact Version 6.1 Launch");
+eventsMap.set("202510240730", "Honkai: Star Rail Version 3.7 Livestream");
+eventsMap.set("202510310000", "Halloween");
 eventsMap.set("202511042200", "Honkai: Star Rail Version 3.7 Launch");
+eventsMap.set("202511110000", "Veterans Day");
 eventsMap.set("202511112200", "Genshin Impact 6.1 Phase 2 Launch");
+eventsMap.set("202511217000", "Genshin Impact Version 6.2 Livestream");
 eventsMap.set("202511252200", "Honkai: Star Rail 3.7 Phase 2 Launch");
+eventsMap.set("202511270000", "Thanksgiving");
 eventsMap.set("202512022200", "Genshin Impact Version 6.2 Launch");
+eventsMap.set("202512050630", "Honkai: Star Rail Version 3.8 Livestream");
 eventsMap.set("202512162200", "Honkai: Star Rail Version 3.8 Launch");
 eventsMap.set("202512232200", "Genshin Impact 6.2 Phase 2 Launch");
+eventsMap.set("202512240000", "Christmas Eve");
+eventsMap.set("202512250000", "Christmas");
+eventsMap.set("202512310000", "New Years Eve");
 
 function determineDays(month) {
     if (oddmonths.indexOf(month) >= 0) {
