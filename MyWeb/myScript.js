@@ -270,8 +270,8 @@ const oddmonths = [1, 3, 5, 8, 10];
 const intervals = [30, 12, 31, 24, 60];
 
 eventsMap.set("202507292300", "Genshin Impact Version 5.8 Launch");
-eventsMap.set("202508010000", "Community at Cornell Reading Reflection Due");
 eventsMap.set("202508011200", "Launch Cornell Consulting");
+eventsMap.set("202508020730", "Honkai: Star Rail Version 3.5 Livestream");
 eventsMap.set("202508041430", "Community at Cornell Zoom Call");
 eventsMap.set("202508180000", "Cornell Pre-Orientation Deadline");
 eventsMap.set("202508122300", "Honkai: Star Rail Version 3.5 Launch");
