@@ -269,35 +269,13 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const oddmonths = [1, 3, 5, 8, 10];
 const intervals = [30, 12, 31, 24, 60];
 
-eventsMap.set("202507292300", "Genshin Impact Version 5.8 Launch");
 eventsMap.set("202508011200", "Launch Cornell Consulting");
-eventsMap.set("202508020730", "Honkai: Star Rail Version 3.5 Livestream");
-eventsMap.set("202508122300", "Honkai: Star Rail Version 3.5 Launch");
 eventsMap.set("202508181200", "Finish Backend First Project");
-eventsMap.set("202508192300", "Genshin Impact 5.8 Phase 2 Launch");
-eventsMap.set("202508298000", "Genshin Impact Version 6.0 Livestream");
 eventsMap.set("202509010000", "Labor Day");
-eventsMap.set("202509022300", "Honkai: Star Rail 3.5 Phase 2 Launch");
-eventsMap.set("202509092300", "Genshin Impact Version 6.0 Launch");
-eventsMap.set("202509120730", "Honkai: Star Rail Version 3.6 Livestream");
-eventsMap.set("202509232300", "Honkai: Star Rail Version 3.6 Launch");
-eventsMap.set("202509302300", "Genshin Impact 6.0 Phase 2 Launch");
-eventsMap.set("202510108000", "Genshin Impact Version 6.1 Livestream");
 eventsMap.set("202510130000", "Indigenous Peoples Day");
-eventsMap.set("202510142300", "Honkai: Star Rail 3.6 Phase 2 Launch");
-eventsMap.set("202510212300", "Genshin Impact Version 6.1 Launch");
-eventsMap.set("202510240730", "Honkai: Star Rail Version 3.7 Livestream");
 eventsMap.set("202510310000", "Halloween");
-eventsMap.set("202511042200", "Honkai: Star Rail Version 3.7 Launch");
 eventsMap.set("202511110000", "Veterans Day");
-eventsMap.set("202511112200", "Genshin Impact 6.1 Phase 2 Launch");
-eventsMap.set("202511217000", "Genshin Impact Version 6.2 Livestream");
-eventsMap.set("202511252200", "Honkai: Star Rail 3.7 Phase 2 Launch");
 eventsMap.set("202511270000", "Thanksgiving");
-eventsMap.set("202512022200", "Genshin Impact Version 6.2 Launch");
-eventsMap.set("202512050630", "Honkai: Star Rail Version 3.8 Livestream");
-eventsMap.set("202512162200", "Honkai: Star Rail Version 3.8 Launch");
-eventsMap.set("202512232200", "Genshin Impact 6.2 Phase 2 Launch");
 eventsMap.set("202512240000", "Christmas Eve");
 eventsMap.set("202512250000", "Christmas");
 eventsMap.set("202512310000", "New Years Eve");
@@ -490,83 +468,3 @@ function changeMonth(n) {
 
 const newCalendars = createCalendars();
 document.addEventListener("DOMContentLoaded", upcomingEvents);
-
-"Creating My Wish Histories"
-const wishMapper = new Map();
-wishMapper.set("GICharacterBanner", ["Mona 73", "Kamisato Ayaka 78", "Tartaglia 76", "Qiqi 74", "Zhongli 77", "Jean 76",
-    "Ganyu 51", "Ganyu 1", "Venti 74", "Kaedehara Kazuha 74", "Qiqi 28", "Kaedehara Kazuha 79", "Klee 67", "Mona 79", 
-    "Albedo 82", "Qiqi 78", "Wanderer 76", "Nahida 81", "Tighnari 75", "Nahida 75", "Nahida 1", "Kaedehara Kazuha 75", 
-    "Alhaitham 80", "Lyney 75", "Keqing 81", "Neuvillette 45", "Arlecchino 83", "Furina 78", "Dehya 75", "Furina 79",
-    "Tighnari 78", "Furina 78", "Xilonen 75", "Escoffier 21", "Diluc 76", "Kinich 9", "Skirk 78", "Yumemizuki Mizuki 83",
-    "Mavuika 76", "Mona 43", "Emilie 5"]);
-wishMapper.set("GIWeaponBanner", ["Elegy for the End 33", "Primordial Jade Winged-Spear 70", "The First Great Magic 65",
-    "Crimson Moon's Semblance 28", "Cashflow Supervision 71", "Splendor of Tranquil Waters 65", "Azurelight 69"]);
-wishMapper.set("GIStandardBanner", ["Mona 12", "Skyward Pride 9", "Jean 76", "Amos' Bow 77", "Skyward Spine 31",
-    "Skyward Spine 27", "Diluc 76", "Tighnari 7", "Skyward Harp 80", "Tighnari 18", "Skyward Atlas 2", "Diluc 4", 
-    "Mona 81", "Lost Prayer to the Sacred Winds 77", "Wolf's Gravestone 2", "Tighnari 78", "Primordial Jade Winged-Spear 76"]);
-wishMapper.set("HSRCharacterBanner", ["Adventurine 42", "Firefly 82", "Clara 20", "Ruan Mei 34", "Gepard 1", "Black Swan 68",
-    "Acheron 66", "Acheron 76", "Acheron 78", "Sunday 61", "Fugue 44", "The Herta 20", "Yanqing 26", "Robin 38", "Welt 81",
-    "Huohuo 51", "Castorice 15", "Bronya 11", "Anaxa 76", "Phainon 77"])
-wishMapper.set("HSRLightConeBanner", ["Whereabouts Should Dreams Rest 22", "Past Self in Mirror 19", "Along the Passing Shore 67",
-    "Along the Passing Shore 1", "Into the Unreachable Veil 58", "Moment of Victory 71", "Make Farewells More Beautiful 69",
-    "Thus Burns the Dawn 21"
-])
-wishMapper.set("HSRStandardBanner", ["But the Battle Isn't Over 1", "Yanqing 79", "Night on the Milky Way 37",
-    "Night on the Milky Way 82", "Sleep Like the Dead 12"])
-function generateWishes() {
-    for ([b, h] of wishMapper) {
-        parent = document.getElementById(b);
-        if (b.includes("Weapon") || (b.includes("Light"))) {
-            inc = 80/3;
-        }
-        else {
-            inc = 30;
-        }
-        for (x of h) {
-            p = document.createElement("p");
-            p.textContent = x;
-            p.classList = "wishType";
-            pity = parseInt(x.match(/\d+/g)[0]);
-            newRV = Math.trunc(pity/(inc * 3) * -93 + 255).toString(16).padStart(2, "0");
-            p.style.color = "#" + newRV + "80ff";
-            p.style.borderColor = "#" + newRV + "80ff";
-            parent.insertBefore(p, null);
-        }
-    }
-}
-
-function firstStartBanners() {
-    Array.from(document.getElementsByClassName("GIBanners")).forEach((x) => x.style.display = "none");
-    document.getElementById("GIChar").style.display = "block";
-    Array.from(document.getElementsByClassName("HSRBanners")).forEach((x) => x.style.display = "none");
-    document.getElementById("HSRChar").style.display = "block";
-}
-
-function GIdisplayActive(banner, ne) {
-    Array.from(document.getElementsByClassName("GIWishType")).forEach((x) => x.classList.remove("activeBanner"));
-    document.getElementById(ne).classList.add("activeBanner");
-    Array.from(document.getElementsByClassName("GIBanners")).forEach((x) => x.style.display = "none");
-    document.getElementById(banner).style.display = "block";
-}
-
-function HSRdisplayActive(banner, ne) {
-    Array.from(document.getElementsByClassName("HSRWishType")).forEach((x) => x.classList.remove("activeBanner"));
-    document.getElementById(ne).classList.add("activeBanner");
-    Array.from(document.getElementsByClassName("HSRBanners")).forEach((x) => x.style.display = "none");
-    document.getElementById(banner).style.display = "block";
-}
-
-firstStartBanners();
-generateWishes();
-
-"Handling the Theater/Endgame"
-function displayTheater(tf) {
-    if (tf == 1) {
-        document.getElementById("popupImagine_T").style.display = "flex";
-        document.body.style.overflow = "hidden";
-    }
-    if (tf == -1) {
-        document.getElementById("popupImagine_T").style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-}
