@@ -429,6 +429,9 @@ function createCalendars() {
     newCalendars[monthNum] = calendarItem;
     createCalBefore(monthNum, newCalendars);
     createCalAfter(monthNum, newCalendars);
+    n = new Date();
+    x = n.getMonth();
+    calendarItem.replaceWith(newCalendars[x]);
     return newCalendars;
 }
 
