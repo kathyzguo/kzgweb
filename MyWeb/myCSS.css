@@ -397,6 +397,14 @@ input:checked + span {
   background: #ffb3f7; 
 }
 
+.mSkills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3vw;
+    margin: 2vw;
+}
+
 #m3 {
     width: 300px;
     float: left;
