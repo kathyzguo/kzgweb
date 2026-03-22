@@ -11,16 +11,13 @@
     <body>
     <nav class = "leftnav">
         <a href = "#Top">Top</a>
-        <a href = "#About">About Me</a>
+        <a href = "#About">About</a>
         <a href = "#Skills">Skills</a>
         <a href = "#Projects">Projects</a>
         <a href = "#GoogL">Google Links</a>
         <a href = "#Weather">Weather</a>
-        <a href = "#Events">Events</a>
-        <a href = "#Credits">Credits</a>
         <img src = "Arrows/ArrowIcon_Left.png" onclick = closeNav()>
     </nav>
-    <img id = "back_right" src = "Arrows/ArrowIcon_RightB.png" onclick = openNav()>
     <div id = "Top" class = "scroll">
         <h1 class = "time_message" style = "text-align:center; margin-top: 0px; 
         margin-bottom: 5px; font-size: 50px;"></h1>
@@ -29,18 +26,18 @@
             <span class = "time pu"></span>
         </h1>
     </div>
-    <div id = "About" class = "scroll">
+    <img id = "back_right" src = "Arrows/ArrowIcon_RightB.png" onclick = openNav()>
+    <div id = "About" class = "scroll fadeIn">
         <h2>About Me</h2>
         <img src = "Misc/Me_!.jpeg" id = "m3">
         <h3 style = "font-weight: 500;">Hi! My name is <span class = "pu">Kathy Guo</span> |
-        Welcome to my <span class = "pu">Personal Website!</span></h3>
-        <p>CURRENTLY OUTDATED: WILL UPDATE IN MARCH 2026. I'm a 2029 Cornell University Arts & Sciences (CAS) student and graduated TJHSST in 2025!
-            At Cornell, I hope to double major in chemistry and CS! Though, I also hope to apply for the College Scholar 
-            major at CAS during Fall 2026 so I can focus more on my study of renewable energy sources. 
-            I'm currently interested in learning more about CS and using AI to find new energy pathways.
-            However, I'm also using my time to learn more about different CS languages, such as HTML, CSS, and JavaScript!
+        Welcome to my <span class = "pu">Personal Website</span></h3>
+        <p>I'm a 2029 Cornell University engineering student and graduated TJHSST in 2025. 
+            At Cornell, I plan on double majoring in MSE and CS while working towards renewable energy research. 
+            I'm currently interested in learning more about the intersection of MSE and CS, using AI to find new energy pathways. 
+            However, I'm also using my time to learn more about different material structure and promising semiconducting materials. 
         </p>
-        <p>My other hobbies include games, spending time with people, and puzzles! I like playing all different 
+        <p>My other hobbies include games, spending time with people, and puzzles. I like playing all different 
             types of games, especially when there's math or strategy involved.
             I like to have fun with other people, to bring groups of people together, and to connect with each other.
             One of my hobbies is just listening to people talk about their viewpoints and perspectives, so I can 
@@ -53,12 +50,11 @@
         <p>My current goals include trying to find a way to make renewable energies more sustainable. Currently, there 
             are problems with storage, conversion, and transportation of these energies that prevent them from becoming 
             our society's main energy source. My goal is to research those barriers and help renewable energies become
-            more efficient and sustainable. Another goal of mine is to develop more technologies that help fix our
-            world's greatest issues. This includes renewable energy sources but not just. A smaller goal of mine is to 
-            help other people in need! I'm always down to help others in need on almost anything so contact me and we can 
-            get started!
+            more efficient and sustainable. I'm currently looking into efficient semiconducting materials in solar cells. 
+            A smaller goal of mine is to help other people in need: 
+            I'm always down to help others in need on almost anything so contact me and we can get started!
         </p>
-        <h4>Contact Information:</h4>
+        <h4 style = "margin-bottom: -7px">Contact Information:</h4>
         <div id = "contactInfo">
             <div>
                 <p>Email: <span class = "pu">kathyzguo@gmail.com</span></p>
@@ -90,9 +86,9 @@
         </div>
     </div>
     <div id = "Skills" class = "scroll">
-        <h2>Skills</h2>
-        <h3>Lab Experience</h3>
-        <div class = "mSkills">
+        <h2 style = "margin-bottom: -20px">Skills</h2>
+        <h3>Research/Subject Experience</h3>
+        <div class = "mSkills fadeIn">
             <div class = "mySkills">
                 <img src = "Lab Experience/DataA.png">
                 <h3>Data Analysis</h3>
@@ -103,15 +99,12 @@
             </div>
             <div class = "mySkills">
                 <img src = "Lab Experience/Chem.png">
-                <h3>Chemistry Lab Equipment</h3>
+                <h3>Lab Equipment</h3>
             </div>
             <div class = "mySkills">
                 <img src = "Lab Experience/ExpD.png">
                 <h3>Experimental Design</h3>
             </div>
-        </div>
-        <h3>Subjects</h3>
-        <div class = "mSkills">
             <div class = "mySkills">
                 <img src = "Subjects/PhyC.png">
                 <h3>Physical Chemistry</h3>
@@ -141,8 +134,8 @@
                 <h3>Quantum Mechanics</h3>
             </div>
         </div>
-        <h3>Languages</h3>
-        <div class = "mSkills">
+        <h3>Programming Languages/Frameworks</h3>
+        <div class = "mSkills fadeIn">
             <div class = "mySkills">
                 <img src = "Languages/Python.png">
                 <h3>Python</h3>
@@ -164,42 +157,27 @@
                 <h3>JavaScript</h3>
             </div>
             <div class = "mySkills">
-                <img src = "Languages/English.png">
-                <h3>English</h3>
+                <img src = "Languages/React.png">
+                <h3>React</h3>
             </div>
             <div class = "mySkills">
-                <img src = "Languages/Chinese.png">
-                <h3>Chinese</h3>
-            </div>
-        </div>
-        <h3>Leadership</h3>
-        <div class = "mSkills">
-            <div class = "mySkills">
-                <img src = "Leadership/Organizing.png">
-                <h3>Organizing</h3>
+                <img src = "Languages/Express.png">
+                <h3>Express</h3>
             </div>
             <div class = "mySkills">
-                <img src = "Leadership/Planning.png">
-                <h3>Planning</h3>
+                <img src = "Languages/PostgreSQL.png">
+                <h3>PostgreSQL</h3>
             </div>
             <div class = "mySkills">
-                <img src = "Leadership/Communicating.png">
-                <h3>Communicating</h3>
-            </div>
-            <div class = "mySkills">
-                <img src = "Leadership/Managing.png">
-                <h3>Managing</h3>
-            </div>
-            <div class = "mySkills">
-                <img src = "Leadership/Teamwork.png">
-                <h3>Teamwork</h3>
+                <img src = "Languages/AWS.png">
+                <h3>AWS Deployment</h3>
             </div>
         </div>
     </div>
     <div id = "Projects" class = "scroll">
-        <h2>Projects</h2>
-        <div class = "Proj">
-            <img src = "Projects/CaCO3.png" style = "height: 240px;">
+        <h2 style = "margin-bottom: -20px">Research/Projects</h2>
+        <div class = "Proj fadeIn">
+            <img src = "Projects/CaCO3.png" style = "width: 375px; aspect-ratio: auto;">
             <div>
                 <h3>Cyclodextrin Metal Organic Framework 1 (CD-MOF-1) on the Rate of Carbon Dioxide Absorption</h3>
                 <p>Tested the efficiency of CD-MOF-1 with multiple amines on carbon dioxide absorption.
@@ -213,22 +191,22 @@
                 </p>
             </div>
         </div>
-        <div class = "Proj">
-            <img src = "Projects/ReS2.jpg" style = "height: 225px; order: 2;">
+        <div class = "Proj fadeIn">
+            <img src = "Projects/ReS2.jpg" style = "width: 350px; aspect-ratio: auto; order: 2;">
             <div>
                 <h3>Polarization Dependent Photoelectrochemistry of Anisotropic Rhenium Disulfide</h3>
                 <p>Worked with conducting Rhenium Disulfide, a member of the transition metal dichalcogenides (TMDs) family.
                     These two-dimensional materials have high surface area and tunability, which make them excellent photocatalysts.
-                    ReS2, especially, has a rhenium diamond shaped structure which changes depending on the axis viewed. Tested
-                    the different axes of ReS2 when shined with light using scanning electrochemical cell microscopy (SECCM). Found
+                    ReS<sub>2</sub>, especially, has a rhenium diamond shaped structure which changes depending on the axis viewed. Tested
+                    the different axes of ReS<sub>2</sub> when shined with light using scanning electrochemical cell microscopy (SECCM). Found
                     that maximum current was achieved when the light's electric field aligned with the rhenium diamond structure's long
-                    end (the b-axis). The more ReS2 layers stacked, the less of a difference the alignment made. CREDIT: GMU Chemistry 
+                    end (the b-axis). The more ReS<sub>2</sub> layers stacked, the less of a difference the alignment made. CREDIT: GMU Chemistry 
                     Department Research Lab; More information visit: <a href = "https://journals.gmu.edu/jssr/article/view/4359" 
                     target = "_blank">the GMU ASSIP journal</a></p>
             </div>
         </div>
-        <div class = "Proj">
-            <img src = "Projects/ZCISQD.png" style = "height: 248px;">
+        <div class = "Proj fadeIn">
+            <img src = "Projects/ZCISQD.png" style = "width: 400px; aspect-ratio: auto;">
             <div>
                 <h3>Application of Zinc Copper Indium Sulfide Quantum Dots (ZCIS QDs) in Solar Cells</h3>
                 <p>Created different sized ZCIS QDs and measured their efficiency against different colors of light. Different
@@ -241,24 +219,34 @@
                 </p>
             </div>
         </div>
-        <div class = "Proj">
+        <div class = "Proj fadeIn">
             <div>
-                <h3>This Website!</h3>
-                <p>This is my first webpage that I've made after learning HTML, CSS, and JavaScript for 1 month (only static)! 
-                    Because I'm just starting out, some of the displays on different screen sizes may be inconsistent.
-                    I've tested with different types of displays (flex/block...) and changing the screen size may affect
-                    elements differently depending on which section is viewed. For best viewing purposes, this website
-                    should be looked at on a larger aspect-ratio device (computer/laptop) or a smaller one (phone). anything
-                    in between messes up some of the displays (like viewing on a square device). I'm still learning more about
-                    web development but will leave this website as it is to display the progress I've made in 1 month! Though,
-                    I will still update this website with my projects, skills, and records since it also serves as a personal
-                    website for me to use.<br><br> The next few sections are the ones I use for my own personal planning and for
-                    easy accessibility. It's also for friends/family to see. But feel free to browse and see the features!
+                <h3>Personal Website</h3>
+                <p>This is my first webpage that I've made after self-learning HTML, CSS, and JavaScript for 1 month! 
+                    As I continue to learn more about web development, I will update this website with my projects, 
+                    skills, and records. I included some quick access links and information below for my own easier use. 
+                    I finished this website at around August 2025 and will use it to keep track of my future journey.
+                    <br/><br/>
+                    I decided to factor out some elements and put it into a different website. 
+                    For example, this website used to have a calendar attached to it but it was hard to maintain.
+                    Following my desire to keep track of items on a styled calendar, I created another app (shown below) to keep track of my commitments.
+                </p>
+            </div>
+        </div>
+        <div class = "Proj fadeIn">
+            <img src = "Projects/Traxiu.png" style = "width: 300px; aspect-ratio: auto; order: 2;">
+            <div>
+                <h3>Traxiu</h3>
+                <p>Wanted to keep track of a calendar and goals in a more appealing way and that I could navigate easily.
+                    Started as a learning project for full-stack development using React, Express, and PostgreSQL with AWS databases 
+                    and distributions for deployment. This project took me around 7 months to complete after my personal website, 
+                    from August 2025 to March 2026. For more information, visit: <a href = "https://traxiu.com/" 
+                    target = "_blank">Traxiu</a>
                 </p>
             </div>
         </div>
     </div>
-    <div id = "GoogL" class = "scroll" style = "clear: both;">
+    <div id = "GoogL" class = "scroll fadeIn" style = "clear: both;">
         <h2>Google Links</h2>
         <form action = "https://www.google.com/search" method = "get">
             <input type = "text" id = "googleinput" name = "q" placeholder = "Google Search">
@@ -303,13 +291,13 @@
             </a>
         </div>
     </div>
-    <div id = "Weather" class = "scroll">
+    <div id = "Weather" class = "scroll fadeIn">
         <h2 style = "margin-top: 30px;">Weather</h2>
         <img src = "GI-HSR Emotes/March7thBeam.jpg" style = "width: 200px; float: left; margin: -30px 20px -15px 0px">
-        <p>All weather information provided by WeatherWidgets and Forecast7!<br>For more information visit:
+        <p>All weather information provided by WeatherWidgets and Forecast7<br>For more information visit:
             <a href = "https://weatherwidget.io/" target = "_blank">https://weatherwidget.io/</a> or anything with the link
             <a href = "https://forecast7.com/en/" target = "_blank">https://forecast7.com/en/</a> helps!
-            <br>If it doesn't work the website might be down ;-;</p>
+            <br>If it doesn't work the website might be down</p>
         <p>Select which location to display | Choose which degree to use</p>
         <div class = "weathercontainer">
             <button onClick = "displayCities()" id = "citiesbutton">Ithaca, NY</button>
@@ -359,43 +347,6 @@
         data-label_1 = "ITHACA" data-label_2 = "WEATHER" id = "ithNY-io"
         data-icons = "Climacons Animated" data-theme = "pure" data-scale = "1.5"
         data-accent = "none" data-highcolor = "#5305f0" data-lowcolor = "#ff88ff">ITHACA WEATHER</a>
-    </div>
-    <div id = "Events" class = "scroll">
-        <h2>Events</h2>
-        <img src = "GI-HSR Emotes/SundayTea.jpeg" style = "width: 250px; float: right; margin-top: -47px;">
-        <p style = "margin-top: -10px; margin-bottom: -10px; line-height: 1.35">My personal events for the year 2025!
-            <br>Far away events are not yet placed; events before 22 July are not placed
-            <br>Shows upcoming events (next week) as well as all events on a calendar</p>
-        <h3>Upcoming Events</h3>
-        <ul id = "upcomingEvents" style = "margin-top: -22px;"></ul>
-        <h3>Calendar</h3>
-        <div class = "calendar 2" id = "July">
-            <img src = "Arrows/ArrowIcon_Left.png" id = "calLeftArrow" onclick = changeMonth(-1)>
-            <h2 id = "monthHeading">July 2025</h2>
-            <img src = "Arrows/ArrowIcon_Right.png" id = "calRightArrow" onclick = changeMonth(1)>
-            <h3>Sunday</h3>
-            <h3>Monday</h3>
-            <h3>Tuesday</h3>
-            <h3>Wednesday</h3>
-            <h3>Thursday</h3>
-            <h3>Friday</h3>
-            <h3>Saturday</h3>
-        </div>
-    </div>
-    <div id = "Credits" class = "scroll">
-        <h2>Credits</h2>
-        <h3 style = "white-space: nowrap;">Google Images: </h3>
-        <p>For providing most of the icons I used</p>
-        <h3>Hoyoverse Emotes: </h3>
-        <p>For providing the best emotes to put around my page</p>
-        <h3>Claude AI</h3>
-        <p>For helping me with my debugging and spelling/grammar checks</p>
-        <h3>W3Schools</h3>
-        <p>For teaching me more about web development</p>
-        <h3>Github</h3>
-        <p>For hosting these files</p>
-        <h3>AWS</h3>
-        <p>For providing a domain for this website</p>
     </div>
 </html>
 

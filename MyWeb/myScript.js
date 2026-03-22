@@ -17,19 +17,19 @@ function currentTime() {
 function convertTimeMessage(time) {
     first_2 = parseInt(time.substring(0, 3));
     if (first_2 >= 1 && first_2 < 3) {
-        return "Bro go to sleep...";
+        return "Good Evening";
     }
     if (first_2 >= 3 && first_2 < 6) {
-        return "?????";
+        return "Good Evening";
     }
     else if (first_2 >= 6 && first_2 < 13) {
-        return "Good Morning!";
+        return "Good Morning";
     }
     else if (first_2 >= 13 && first_2 < 19) {
-        return "Good Afternoon!";
+        return "Good Afternoon";
     }
     else {
-        return "Good Evening!";
+        return "Good Evening";
     }
 }
 
@@ -45,6 +45,7 @@ setInterval(currentTime, 1000);
 
 "Scrolling different color based on place"
 const target = document.querySelectorAll(".scroll");
+const target2 = document.querySelectorAll(".fadeIn");
 const links_target = document.querySelectorAll(".leftnav a");
 isVisible = false;
 
@@ -66,11 +67,30 @@ function highlight(entry) {
     }
 }
 
+function callback2(entries) {
+    entries.forEach(highlight2);
+}
+
+function highlight2(entry) {
+    entry_id = entry.target.id;
+    if (entry.isIntersecting) {
+        entry.target.classList.add("visible")
+    }
+    else {
+        entry.target.classList.remove("visible")
+    }
+}
+
 const io = new IntersectionObserver(callback, options)
+const io2 = new IntersectionObserver(callback2, options)
 active_tabs = [];
 
 for (t of target) {
     io.observe(t);
+}
+
+for (t of target2) {
+    io2.observe(t);
 }
 
 "Sliding sidebar animation"

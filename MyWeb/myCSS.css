@@ -11,13 +11,14 @@
 
 body {
   font-family: "Montserrat";
-  margin-left: 185px;
+  margin-left: 190px;
   transition: 0.5s;
 }
 
 h2 {
     font-size: 35px;
     text-decoration: none; 
+    margin-bottom: 15px;
 }
 
 h3 {
@@ -50,7 +51,7 @@ p {
 }
 
 .leftnav {
-    margin-left: -185px;
+    margin-left: -190px;
     background-color: #111111;
     overflow: hidden;
     height: 100%;
@@ -397,12 +398,16 @@ input:checked + span {
   background: #ffb3f7; 
 }
 
+#Skills > h3 {
+    margin-bottom: 15px;
+}
+
 .mSkills {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 3vw;
-    margin: 2vw;
+    gap: 25px;
+    margin: 25px;
 }
 
 #m3 {
@@ -416,46 +421,53 @@ input:checked + span {
 
 .mySkills {
     box-sizing: border-box;
-    box-shadow:  1vw 1vw #ff72ff;
-    width: 13vw;
-    aspect-ratio: 1;
+    box-shadow:  10px 10px #ff72ff;
+    width: 175px;
+    height: 175px;
+    padding: 15px;
     background-color: #ffaaff;
     position: relative;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .mySkills:hover {
-    box-sizing: border-box;
-    box-shadow:  1.5vw 1.5vw#ff52ff;
-    margin: -0.5vw 0 0 -0.5vw;
-    width: 13vw;
-    aspect-ratio: 1;
+    box-shadow:  15px 15px #ff52ff;
+    margin: -7px 0 0 -7px;
     background-color: #ff92ff;
-    position: relative;
 }
 
 .mySkills > img {
-    width: 6vw;
-    display: block;
-    margin: 1vw auto;
+    width: 90px;
+    height: 90px;
 }
 
 .mySkills > h3 {
     color: #ffffff;
-    font-size: 1.5vw;
+    font-size: 20px;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 5px;
 }
 
 .Proj {
-    width: 95%;
+    width: 93%;
     display: flex;
     height: fit-content;
     background-color: #AF8DFF;
     border-radius: 10px;
     box-shadow: -10px -10px #8049ff;
     margin: 50px auto;
+    padding: 0 10px;
+}
+.Proj:hover {
+    box-shadow: -15px -15px #6625ff;
+    background-color: #9365ff;
+    transition: 0.3s;
 }
 
 .Proj > img {
@@ -490,6 +502,17 @@ input:checked + span {
 .no { 
     margin: 0;
     padding : 0;
+}
+
+.fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.fadeIn.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes progressBarSlide{
